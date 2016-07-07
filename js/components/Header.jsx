@@ -2,6 +2,8 @@ import React from 'react';
 
 export default class Header extends React.Component {
   render() {
-    return <header>This is my Header</header>
+    return (
+      <a className="navbar-brand" href="#">{this.props.title}</a>
+    )
   }
 }
