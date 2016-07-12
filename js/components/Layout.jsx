@@ -6,15 +6,13 @@ import Nav from './Nav.jsx';
 export default class Layout extends React.Component {
   constructor() {
     super();
-    this.state = {
-      backgroundColor: '#e2e3e4',
-    }
+    this.state = {}
   }
   render() {
     return (
       <div>
         <Nav />
-        <Main color={this.state.backgroundColor}/>
+        <Main />
         <Footer />
       </div>
     )

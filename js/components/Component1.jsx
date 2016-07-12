@@ -5,27 +5,25 @@ export default class Component1 extends React.Component {
   constructor() {
     super();
     this.state = {
-      backgroundColor: "#e2e3e4"
+      backgroundColor: randomColor({luminosity: 'bright', hue: 'orange'})
     }
     this.handleClick = this.handleClick.bind(this);
+    this.handleHover = this.handleHover.bind(this);
+  }
+  handleHover(e) {
+    this.setState({backgroundColor: randomColor({luminosity: 'bright', hue: 'blue'}) });
+    e.target.innerHTML = '';
   }
   handleClick(e) {
-    this.setState({backgroundColor: randomColor() });
+    e.target.innerHTML = this.state.backgroundColor;
   }
   render() {
     let style = {
       backgroundColor: this.state.backgroundColor
     }
     return (
-      <div className="row">
-        <div className="col-xs-12">
-          <div className="box" onClick={this.handleClick} style={style}>
-            <h1>Click Me!</h1>
-            <p>I change colors!</p>
-            <p>current color: {this.state.backgroundColor}</p>
-          </div>
-        </div>
-      </div>
+      <span className="box" onMouseOver={this.handleHover} onClick={this.handleClick} style={style}>
+      </span>
     )
   }
 }
