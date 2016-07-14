@@ -4,8 +4,11 @@
   "description": "Playing with ReactJS",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --port 3030",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -d --progress --colors --watch",
+    "dist": "webpack -p",
+    "postinstall": "npm run dist",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,13 +21,20 @@
   },
   "homepage": "https://github.com/AdamTyler/reactFun#readme",
   "dependencies": {
-    "randomcolor": "^0.4.4",
-    "react": "^15.2.0",
-    "react-dom": "^15.2.0",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "morgan": "^1.7.0",
+    "randomcolor": "^0.4.4",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "request": "^2.73.0",
+    "serve-favicon": "^2.3.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {}
