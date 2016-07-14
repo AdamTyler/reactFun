@@ -1,6 +1,6 @@
 # reactFun
 
-See it running on <a href="http://reactfun.herokuapp.com/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Heroku_logo.png/220px-Heroku_logo.png" style="width: 100px;"></a>
+See it running on <a href="http://reactfun.herokuapp.com/"><img src="http://tushman.com/assets/heroku-logo-small-5505953ff16333abd226e52aa61f8443.png"></a>
 
 Playing with [ReactJS](https://facebook.github.io/react/)
 
