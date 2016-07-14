@@ -6,13 +6,14 @@ export default class Component1 extends React.Component {
     super(props);
     this.state = {
       hue: props.hue,
-      backgroundColor: randomColor({luminosity: 'bright', hue: props.hue})
+      luminosity: props.luminosity,
+      backgroundColor: randomColor({luminosity: 'bright', hue: props.hue, luminosity: props.luminosity})
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleHover = this.handleHover.bind(this);
   }
   handleHover(e) {
-    this.setState({backgroundColor: randomColor({luminosity: 'bright', hue: this.props.hue}) });
+    this.setState({backgroundColor: randomColor({luminosity: this.props.luminosity, hue: this.props.hue}) });
     e.target.innerHTML = '';
   }
   handleClick(e) {
