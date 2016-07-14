@@ -19,7 +19,7 @@ export default class Main extends React.Component {
   render() {
     return (
       <main className="container">
-        <div className="row">
+        <div className="row" id="colorForm">
           <ColorForm hue={this.state.hue} luminosity={this.state.luminosity}
            changeHue={this.setHue.bind(this)} changeLuminosity={this.setLuminosity.bind(this)} />
         </div>
