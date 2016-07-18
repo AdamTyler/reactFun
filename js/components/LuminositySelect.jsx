@@ -7,8 +7,8 @@ export default class LuminositySelect extends React.Component {
   render() {
     return (
       <div className="form-group">
-        <label htmlFor="luminSelect" className="control-label col-xs-12 col-sm-6 col-md-3 col-md-offset-2">Luminosity:</label>
-        <div className="col-xs-12 col-sm-6 col-md-3">
+        <label htmlFor="luminSelect" className="control-label col-xs-3 col-sm-6 col-md-3 col-md-offset-2">Luminosity:</label>
+        <div className="col-xs-9 col-sm-6 col-md-3">
           <select id="luminSelect" className="form-control" value={this.props.luminosity} onChange={this.handleChange.bind(this)}>
             <option value="bright">Bright</option>
             <option value="light">Light</option>
