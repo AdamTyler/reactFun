@@ -1,6 +1,5 @@
 import React from 'react';
-import Main from './Main.jsx';
-import Nav from './Nav.jsx';
+import Header from '../components/Header.jsx';
 
 export default class Layout extends React.Component {
   constructor() {
@@ -9,9 +8,9 @@ export default class Layout extends React.Component {
   }
   render() {
     return (
-      <div className="appContainer">
-        <Nav />
-        <Main />
+      <div className="">
+        <Header />
+        {this.props.children}
       </div>
     )
   }

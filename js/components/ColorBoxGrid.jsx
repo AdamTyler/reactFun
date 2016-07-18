@@ -3,7 +3,7 @@ import React from 'react';
 import ColorBox from './ColorBox.jsx';
 import ColorForm from './ColorForm.jsx';
 
-export default class Main extends React.Component {
+export default class ColorBoxGrid extends React.Component {
   constructor() {
     super();
     this.state = { hue: 'blue', luminosity: 'bright' }
@@ -18,7 +18,7 @@ export default class Main extends React.Component {
   }
   render() {
     return (
-      <main className="container">
+      <main className="container appContainer">
         <div className="row" id="colorForm">
           <ColorForm hue={this.state.hue} luminosity={this.state.luminosity}
            changeHue={this.setHue.bind(this)} changeLuminosity={this.setLuminosity.bind(this)} />

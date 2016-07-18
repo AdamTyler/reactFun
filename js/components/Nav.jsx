@@ -1,15 +1,24 @@
 import React from 'react';
-
-import Header from './Header.jsx';
+import { Link } from 'react-router';
 
 export default class Nav extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-inverse navbar-static-top">
-        <div className="container">
-          <Header title={'ReactFun'}/>
+      <div className="container">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="#">{this.props.title}</a>
         </div>
-      </nav>
+        <div className="collapse navbar-collapse">
+          <ul className="nav navbar-nav">
+            <li>
+              <Link to="ColorBoxes">ColorBox</Link>
+            </li>
+            <li>
+              <Link to="FakeChat">FakeChat</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     )
   }
 }
