@@ -7,6 +7,7 @@ export default class Component1 extends React.Component {
     this.state = {
       hue: props.hue,
       luminosity: props.luminosity,
+      // animate: props.animate
       backgroundColor: randomColor({luminosity: 'bright', hue: props.hue, luminosity: props.luminosity})
     }
     this.handleClick = this.handleClick.bind(this);
@@ -27,5 +28,13 @@ export default class Component1 extends React.Component {
       <span className="box" onMouseOver={this.handleHover} onClick={this.handleClick} style={style}>
       </span>
     )
+  }
+  componentDidMount() {
+    function updateColor() {
+      this.setState({
+        backgroundColor: randomColor({luminosity: this.props.luminosity, hue: this.props.hue})
+      })
+    }
+    setInterval(updateColor.bind(this), 633);
   }
 }
